@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    :root {
+      --black: #1d1d1d;
+      --white: #ffffff63;
+      --yellow: rgb(255, 0, 51);
+      --deep-yellow: rgba(131, 30, 30, 0.596);
+      --bg-yellow: #ffffff;
+      --btn-yellow: #9b7913;
+      --footer-yellow: #ffffff;
+      --grey: #6b6b6b;
+      --transition: all 0.9s linear;
+    }
+
+    nav {
+      background-color: var(--yellow);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav h1 {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--black);
+      padding: 5px 10px;
+    }
+
+    nav ul li a:hover {
+      color: var(--btn-yellow);
+    }
+
+    .section {
+      padding: 50px 0;
+      position: relative;
+    }
+
+     .section img {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  transform: translateY(-50%);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  /* Add height and width */
+  height: 250px; /* Set your desired height */
+  width: 250px; /* Set your desired width */
+}
+
+
+    .section:hover img {
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .btn-yellow {
+      background-color: var(--btn-yellow);
+      color: var(--bg-yellow);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-yellow:hover {
+      background-color: var(--deep-yellow);
+      color: var(--bg-yellow);
+    }
+  </style>
+  {% load static %}
+</head>
+<body>
+  <nav>
+    <h1>Work With Us</h1>
+
+  </nav>
+
+  <div class="container">
+    <section class="section">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Register Your Restaurant</h2>
+          <p>Expand Your Reach with Foodie!!
+
+Are you ready to elevate your restaurant's online presence and reach a wider audience of hungry customers? Look no further than Foodie! By registering your restaurant on our platform, you'll unlock a world of opportunities to grow your business and increase your revenue.
+
+With our user-friendly interface and seamless ordering system, customers can easily discover your restaurant, browse your mouthwatering menu, and place orders with just a few clicks.</p>
+
+          <a href="{% url 'rr' %}" class="btn btn-yellow">Register</a>
+        </div>
+        <div class="col-md-6">
+
+           {% load static %}
+<img src="{% static 'register.jpg' %}">
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="row">
+        <div class="col-md-6 order-md-2">
+          <h2>Deliver With Us</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna sit amet ligula suscipit, in semper velit dictum. Nulla facilisi. Praesent at dictum odio. Sed nec ligula tellus. Nulla facilisi.</p>
+          <a href="{% url 'Orderbooking' %}" class="btn btn-yellow">Deliver Now</a>
+        </div>
+        <div class="col-md-6 order-md-1">
+
+          <img src= "{% static 'deliver.jpg' %}" alt="Deliver Image">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 FOODIE</p>
+  </footer>
+</body>
+</html>

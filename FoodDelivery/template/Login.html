@@ -1,0 +1,184 @@
+ <!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+ <head>
+  <style>
+
+
+     .background-radial-gradient {
+  background-color: hsl(30, 41%, 95%); /* Light cream color */
+  background-image: radial-gradient(650px circle at 0% 0%,
+      hsla(30, 41%, 85%, 0.9) 25%, /* Semi-transparent red */
+      hsla(30, 41%, 85%, 0.8) 45%,  /* Semi-transparent red */
+      hsla(30, 41%, 85%, 0.7) 85%,  /* Semi-transparent red */
+      hsla(30, 41%, 85%, 0.6) 100%,  /* Semi-transparent red */
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      hsla(30, 41%, 95%, 0.9) 25%, /* Semi-transparent red */
+      hsla(30, 41%, 95%, 0.8) 45%, /* Semi-transparent red */
+      hsla(30, 41%, 95%, 0.7) 85%, /* Semi-transparent red */
+      hsla(30, 41%, 95%, 0.6) 90%, /* Semi-transparent red */
+      transparent 100%);
+
+
+}
+
+
+
+ #radius-shape-1 {
+  height: 320px;
+  width: 320px;
+  top: -60px;
+  left: -130px;
+  background: radial-gradient(#dc143c, #ff6347); /* Light crimson gradient */
+  overflow: hidden;
+  opacity: 0.5;
+
+}
+
+
+
+ #radius-shape-2 {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  bottom: -60px;
+  right: -110px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(#dc143c, #ff6347); /* Light crimson gradient */
+  overflow: hidden;
+  opacity: 0.5;
+
+}
+
+
+
+
+    .bg-glass {
+      background-color: hsla(0, 1%, 100%, 0.9) !important;
+      backdrop-filter: saturate(300%) blur(35px);
+
+    }
+  .logo {
+            text-decoration: none;
+            font-size: 65px;
+            font-weight: bold;
+            color: black; /* Color of the text */
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: #A94438; /* Crimson color for "oo" */
+
+        }
+
+        .yellow {
+            color: yellow; /* Yellow color for the dot */
+        }
+    .background-radial-gradient {
+    position: relative; /* Set position relative to contain absolutely positioned elements */
+    z-index: 0; /* Ensure the shapes are positioned on top of the background image */
+}
+
+.background-image {
+    position: absolute; /* Position the image absolutely within its parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    opacity: 0.5; /* Set the opacity of the image to make it translucent */
+}
+
+
+  </style>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ </head>
+    <a href="/" class="logo">F<span style="color: #A94438;">oo</span>die<span class="yellow">.</span></a>
+
+
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+        <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
+          Delight at Your <br>
+          <span style="color: hsl(218, 81%, 75%)">DoorStep </span>
+        </h1>
+        <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
+
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form id="signupForm" onsubmit="return validateForm()">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                <input type="text" id="form3Example1" class="form-control" required minlength="5" maxlength="50" />
+                <label class="form-label" for="form3Example1">First name</label>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="form-outline">
+                <input type="text" id="form3Example2" class="form-control" required minlength="5" maxlength="50" />
+                <label class="form-label" for="form3Example2">Last name</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+        <input type="email" id="form3Example3" class="form-control" required />
+        <label class="form-label" for="form3Example3">Email address</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+        <input type="password" id="form3Example4" class="form-control" required />
+        <label class="form-label" for="form3Example4">Password</label>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">
+        Signin
+    </button>
+</form>
+
+<script>
+    function validateForm() {
+        // Get form elements
+        var firstName = document.getElementById('form3Example1').value;
+        var lastName = document.getElementById('form3Example2').value;
+        var email = document.getElementById('form3Example3').value;
+        var password = document.getElementById('form3Example4').value;
+
+        // Check if all fields are filled correctly
+        if (firstName.trim() == '' || lastName.trim() == '' || email.trim() == '' || password.trim() == '') {
+            alert('Please fill out all fields.');
+            return false;
+        }
+
+        // Add any additional validation logic here
+
+        // If all validation passes, redirect to another page
+        window.location.href = "{% url 'afterlogin' %}";
+
+        // Prevent form submission (since we're redirecting manually)
+        return false;
+    }
+</script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: Design Block -->

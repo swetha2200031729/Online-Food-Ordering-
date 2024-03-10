@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Form</title>
+    <style>
+        /* Apply basic styling to the form */
+        form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        /* Style the form header */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Style form labels */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Style form inputs */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensure that padding and border are included in the width */
+        }
+
+        /* Style submit button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Change submit button color on hover */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Form</title>
+</head>
+<body>
+    <h1>Delivery Form</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="user_name">User Name:</label>
+        <input type="text" id="user_name" name="user_name"  required><br><br>
+
+        <label for="From_address">From Address:</label>
+        <textarea id="From_address" name="From_address" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="To_address">To Address:</label>
+        <textarea id="To_address" name="To_address" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="Ordered_restaurant">Ordered Restaurant:</label>
+        <input type="text" id="Ordered_restaurant" name="Ordered_restaurant" required><br><br>
+
+        <label for="Ordered_food">Ordered Food:</label>
+        <input type="text" id="Ordered_food" name="Ordered_food"  required><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Added Restaurant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .logo {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 24px;
+    }
+
+    .logo span {
+      color: #A94438;
+    }
+
+    .yellow {
+      color: #F3C130;
+    }
+
+    .footer {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+      color: #666;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      width: 300px;
+      background-color: #fff;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin: 5px 0;
+    }
+
+    .order-link {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .order-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">F<span style="color:#A94438;">oo</span>die<span class="yellow">.</span></a>
+  </nav>
+{% for restaurants in restaurants %}
+  <div class="container">
+    <div class="card">
+      <h3>Restaurant Name: {{ restaurants.restaurant_name }}</h3>
+      <p>Owner Name: {{ restaurants.name }}</p>
+      <p>Address: {{ restaurants.address }}</p>
+      <p>Email: {{ restaurants.Email_address }}</p>
+      <a href="#" class="order-link">Look Order</a>
+    </div>
+    <!-- Add more cards for additional restaurants -->
+  </div>
+  {% endfor %}
+
+  <footer class="footer">
+    &copy; 2024 Foodie App. All rights reserved.
+  </footer>
+</body>
+</html>
